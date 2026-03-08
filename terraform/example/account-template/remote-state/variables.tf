@@ -1,7 +1,7 @@
 variable "bucket_backend_name" {
   type        = string
   description = "Bucket Name - Should be Unique for a region!"
-  default = "tfstate-ecommerce"
+  default     = "tfstate-ecommerce"
 }
 
 variable "extra_tags" {

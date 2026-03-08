@@ -72,7 +72,7 @@ variable "storage_type" {
   type        = string
   description = "Storage type (gp2, gp3, io1, io2)"
   default     = "gp3"
-  
+
   validation {
     condition     = contains(["gp2", "gp3", "io1", "io2"], var.storage_type)
     error_message = "Storage type must be one of: gp2, gp3, io1, io2."

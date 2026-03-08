@@ -1,5 +1,5 @@
 locals {
-   common_tags = merge(
+  common_tags = merge(
     {
       Environment = var.env
       Project     = var.project
