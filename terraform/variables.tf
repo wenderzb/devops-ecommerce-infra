@@ -1,3 +1,7 @@
+####################################
+### VPC and Networking Variables ### 
+####################################
+
 variable "region" {
   type = string
 }
@@ -29,4 +33,17 @@ variable "private_subnet_cidrs" {
 
 variable "availability_zones" {
   type = list(string)
+}
+
+###########
+### ECR ###
+###########
+
+variable "repositories" {
+  description = "Map of ECR repositories"
+  type = map(object({
+    scan_on_push = optional(bool, true)
+    mutable_tags = optional(bool, true)
+  }))
+  default = {}
 }

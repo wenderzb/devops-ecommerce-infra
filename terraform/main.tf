@@ -9,3 +9,12 @@ module "vpc" {
   availability_zones   = var.availability_zones
   extra_tags           = var.extra_tags
 }
+
+module "ecr" {
+  source = "./modules/ecr"
+
+  project      = var.project
+  env          = var.env
+  repositories = var.repositories
+  extra_tags   = var.extra_tags
+}
